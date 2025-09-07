@@ -5,6 +5,7 @@
 
 import {useState} from "react";
 import { tvShows } from "./shows/data";
+import ShowDetails from "./shows/ShowDetails";
 
 function App() {
 
