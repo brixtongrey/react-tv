@@ -6,10 +6,11 @@
 import {useState} from "react";
 import { tvShows } from "./shows/data";
 import ShowDetails from "./shows/ShowDetails";
+import ShowSelection from "./shows/ShowSelection";
 
 function App() {
 
-  const [shows, setShows] = useState(tvShows);
+  const [shows] = useState(tvShows);
   const [selectedShow, setSelectedShow] = useState(); // not sure if these arrays are accurate 
 
   return (
@@ -17,7 +18,14 @@ function App() {
       <header>
         <p>React TV</p>
       </header>
-      <main></main>
+      <main>
+      <ShowSelection
+      shows={shows}
+      selectedShow={selectedShow}
+      setSelectedShow={setSelectedShow}
+      />
+      <ShowDetails show={selectedShow}/>
+      </main>
     </>
   );
 }

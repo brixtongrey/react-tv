@@ -9,7 +9,7 @@ export default function EpisodeList({
 }) {
   return (
     <section className="episodes">
-      <h2>{name}</h2>
+      <h2>{show.name}</h2>
       <ol>
         {episodes.map((episode) => (
           <li

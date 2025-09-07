@@ -1,7 +1,7 @@
 import "./shows.css";
 
 /** A navbar that allows users to choose between a list of shows */
-function ShowSelection({shows, selectedShows, setSelectedShows }) {
+function ShowSelection({show, selectedShow, setSelectedShow }) {
   
   const handleClick = (item) => {
     setSelectedShows(item);
