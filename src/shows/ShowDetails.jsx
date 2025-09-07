@@ -30,7 +30,8 @@ function ShowDetails({show}) {
       </header>
       <div>
       <EpisodeList
-      episode={show.episode}
+      name={show.name}
+      episodes={show.episodes}
       selectedEpisode={selectedEpisode}
       setSelectedEpisode={setSelectedEpisode}
       />

@@ -1,10 +1,10 @@
 import "./shows.css";
 
 /** A navbar that allows users to choose between a list of shows */
-function ShowSelection({show, selectedShow, setSelectedShow }) {
+function ShowSelection({shows, selectedShow, setSelectedShow }) {
   
   const handleClick = (item) => {
-    setSelectedShows(item);
+    setSelectedShow(item);
   };
 
   return (
@@ -14,6 +14,7 @@ function ShowSelection({show, selectedShow, setSelectedShow }) {
     return (
       <button onClick={() => handleClick(show)}
       key={show.name}
+      className={isSelected ? "is selected" : ""}
       type="button"
       >
       {show.name}
